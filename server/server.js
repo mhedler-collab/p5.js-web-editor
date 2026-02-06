@@ -93,11 +93,8 @@ app.use(
       httpOnly: true,
       secure: false,
       maxAge: 1000 * 60 * 60 * 24 * 28 // 4 weeks in milliseconds
-    },
-    store: MongoStore.create({
-      mongoUrl: mongoConnectionString,
-      ttl: 1000 * 60 * 60 * 24 * 28 // 4 weeks in milliseconds to match cookie maxAge
-    })
+    }
+   
   })
 );
 
